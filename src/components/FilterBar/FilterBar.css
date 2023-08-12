@@ -1,0 +1,35 @@
+.filter-bar {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-bar input, .filter-bar select, .filter-bar button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+}
+
+.filter-bar button {
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .filter-bar{
+      flex-direction: column;
+  }
+}
+
+.filter-bar button.active {
+  background-color: #0056b3; /* Active color */
+  color: white;
+}
+
+.filter-bar button.active:hover {
+  background-color: #0056b3; /* Slightly darker shade for hover on active state */
+}
