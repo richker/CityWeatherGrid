@@ -20,7 +20,7 @@ type Weather = {
   icon: string;
 };
 
-type CurrentWeather = {
+export type CurrentWeather = {
   dt: number;
   sunrise: number;
   sunset: number;
