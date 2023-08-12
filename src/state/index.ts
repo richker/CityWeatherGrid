@@ -50,7 +50,7 @@ export const filteredCitiesSelector = selector({
 
     let filteredCities = allCities.filter(city => 
       (city.name.toLowerCase().includes(searchTerm) || city.country.toLowerCase().includes(searchTerm)) &&
-      (selectedContinent === 'All' || city.continent === selectedContinent)
+      (selectedContinent === 'All' || city.continent === selectedContinent) && (city.active === true)
     );
 
     if (sortCriteria === 'name') {
