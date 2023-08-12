@@ -13,34 +13,19 @@ export type City = {
   coords: Coords;
 };
 
-type Weather = {
-  id: number;
-  main: string;
-  description: string;
+type WeatherCondition = {
+  text: string;
   icon: string;
+  code: number;
 };
-
 export type CurrentWeather = {
-  dt: number;
-  sunrise: number;
-  sunset: number;
-  temp: number;
-  feels_like: number;
-  pressure: number;
+  temp_c: number;
+  temp_f: number;
+  feelslike_c: number;
+  feelslike_f: number;
   humidity: number;
-  dew_point: number;
-  uvi: number;
-  clouds: number;
-  visibility: number;
-  wind_speed: number;
-  wind_deg: number;
-  weather: Weather[];
-};
-
-export type WeatherData = {
-  lat: number;
-  lon: number;
-  timezone: string;
-  timezone_offset: number;
-  current: CurrentWeather;
+  wind_kph: number;
+  wind_degree: number;
+  wind_dir: string;
+  condition: WeatherCondition;
 };

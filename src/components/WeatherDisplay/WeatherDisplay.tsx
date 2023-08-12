@@ -8,21 +8,21 @@ interface Props {
 }
 
 const WeatherDisplay: React.FC<Props> = ({ weather, unit, toggleUnit }) => {
-  const currentWeather = weather.weather && weather.weather[0];
+  const currentCondition = weather.condition;
 
   return (
     <>
-      <p>Temperature: {unit === 'metric' ? weather.temp : weather.temp * 9/5 + 32}°{unit === 'metric' ? 'C' : 'F'}</p>
-      <p>Feels Like: {unit === 'metric' ? weather.feels_like : weather.feels_like * 9/5 + 32}°{unit === 'metric' ? 'C' : 'F'}</p>
+      <p>Temperature: {unit === 'metric' ? weather.temp_c : weather.temp_f}°{unit === 'metric' ? 'C' : 'F'}</p>
+      <p>Feels Like: {unit === 'metric' ? weather.feelslike_c : weather.feelslike_f}°{unit === 'metric' ? 'C' : 'F'}</p>
       <button onClick={toggleUnit}>Toggle °C/°F</button>
-      {currentWeather && (
+      {currentCondition && (
         <>
-          <p>Weather: {currentWeather.description}</p>
-          <img src={currentWeather.icon} alt={currentWeather.description} className="weather-icon" />
+          <p>Weather: {currentCondition.text}</p>
+          <img src={currentCondition.icon} alt={currentCondition.text} className="weather-icon" />
         </>
       )}
       <p>Humidity: {weather.humidity}%</p>
-      <p>Wind: {weather.wind_speed} kph ({weather.wind_deg}°)</p>
+      <p>Wind: {weather.wind_kph} kph ({weather.wind_degree}° {weather.wind_dir})</p>
     </>
   );
 };
