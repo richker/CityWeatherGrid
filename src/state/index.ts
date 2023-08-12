@@ -27,8 +27,8 @@ export const sortDirectionState = atom({
   default: 'asc', // 'asc' or 'desc'
 });
 
+// Haversine formula to calculate the distance between two points on the Earth
 const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
-  // Haversine formula to calculate the distance between two points on the Earth
   const R = 6371; // Radius of the Earth in km
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;

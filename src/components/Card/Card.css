@@ -36,7 +36,7 @@
     margin: 0;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    font-weight: 300; /* Lighter font weight */
+    font-weight: 300;
 }
 
 .card-description {
@@ -48,8 +48,8 @@
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align text to the left */
-    padding-left: 15px; /* Padding to ensure text doesn't touch the edge */
+    justify-content: flex-start;
+    padding-left: 15px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -61,9 +61,9 @@
 .card-description p {
     color: white;
     padding: 10px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     max-width: 80%;
-    font-weight: 300; /* Lighter font weight */
+    font-weight: 300; 
 }
 
 /* Responsive design for tablets and mobile devices */

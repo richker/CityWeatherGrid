@@ -26,10 +26,10 @@
 }
 
 .filter-bar button.active {
-  background-color: #0056b3; /* Active color */
+  background-color: #0056b3;
   color: white;
 }
 
 .filter-bar button.active:hover {
-  background-color: #0056b3; /* Slightly darker shade for hover on active state */
+  background-color: #0056b3;
 }
